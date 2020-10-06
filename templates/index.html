@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Comparateur spots de surf&mdash;Comparateur spots de surf</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">   
+  </head>
+  <body>
+
+    <header role="banner">
+      <div class="top-bar">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="container logo-wrap">
+        <div class="row pt-5">
+          <div class="col-12 text-center">
+            <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+            <h1 class="site-logo"><a href="{{ url_for('accueil') }}">Comparateur spots de surf </a></h1>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-md  navbar-light bg-light">
+        <div class="container">
+          
+         
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('accueil') }}">Accueil </a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('spot_choice') }}">Choisis ton spot </a>
+                </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analyse des spots en france </a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="http://127.0.0.1:2700/dash_0/">{% for i in spot[0:1] %}  {{i['day_0']}}  {% endfor %} </a>
+                  <a class="dropdown-item" href="http://127.0.0.1:2700/dash_1/">{% for i in spot[0:1] %}  {{i['day_1']}}  {% endfor %}</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:2700/dash_2/">{% for i in spot[0:1] %}  {{i['day_2']}}  {% endfor %}</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:2700/dash_3/">{% for i in spot[0:1] %}  {{i['day_3']}}  {% endfor %}</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:2700/dash_4/">{% for i in spot[0:1] %}  {{i['day_4']}}  {% endfor %}</a>
+                </div>
+
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div
+      </nav>
+    </header>
+
+
+    <section class="site-section">
+      <div class="container">
+        
+        <div class="row blog-entries">
+          <div class="col-md-12 col-lg-8 main-content">
+            
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="mb-4">Trouve le meilleur spot ! ! ! </h2>
+                 
+                <p class="mb-5"><img src="{{ url_for('static', filename='images/surf_featured_1.jpg') }}" alt="Image placeholder" class="img-fluid"></p> 
+                <p>  Amateur de glisse voici la nouvelle plateforme qui va te permettre de choisir au mieux tes spots de surf. 
+                  Choisis le spot parmi tous les spots de France qui correspond au mieux aux critères que tu recherches, 
+                  pour des sessions de glisses inoubliables :</p>
+                  
+                  <ul>
+                      <li>Regarde les analyses des conditions partout en France</li>
+                      <li>Choisis ton spot en fonction de tes critères </li>
+
+                    </ul>
+
+                  <center><p>BONNE RIDE </p></center>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+          <!-- END sidebar -->
+
+        </div>
+      </div>
+    </section>
+  
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+            <h3>Application developed by Antoine MOREAU</h3>
+
+          
+      </div>
+    </footer>
+    <!-- END footer -->
+    
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+    
+    <script src="{{ url_for('static', filename='script/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/jquery-migrate-3.0.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/jquery.stellar.min.js') }}"></script>
+
+    
+    <script src="{{ url_for('static', filename='script/main.js') }}"></script>
+  </body>
+</html>

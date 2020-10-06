@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Comparateur spots de surf &mdash;Comparateur spots de surf</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fontawesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">   
+  </head>
+  <body>
+
+    <header role="banner">
+      <div class="top-bar">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="container logo-wrap">
+        <div class="row pt-5">
+          <div class="col-12 text-center">
+            <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+            <h1 class="site-logo"><a href="{{ url_for('accueil') }}">Comparateur spots de surf </a></h1>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-md  navbar-light bg-light">
+        <div class="container">
+          
+         
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('accueil') }}">Accueil </a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('spot_choice') }}">Choisis ton spot </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analyse des spots en france </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown05">
+                      <a class="dropdown-item" href="http://127.0.0.1:2700/dash_0/">{% for i in spot[0:1] %}  {{i['day_0']}}  {% endfor %} </a>
+                      <a class="dropdown-item" href="http://127.0.0.1:2700/dash_1/">{% for i in spot[0:1] %}  {{i['day_1']}}  {% endfor %}</a>
+                      <a class="dropdown-item" href="http://127.0.0.1:2700/dash_2/">{% for i in spot[0:1] %}  {{i['day_2']}}  {% endfor %}</a>
+                      <a class="dropdown-item" href="http://127.0.0.1:2700/dash_3/">{% for i in spot[0:1] %}  {{i['day_3']}}  {% endfor %}</a>
+                      <a class="dropdown-item" href="http://127.0.0.1:2700/dash_4/">{% for i in spot[0:1] %}  {{i['day_4']}}  {% endfor %}</a>
+                    </div>
+    
+                  </li>
+              
+            </ul>
+            
+          </div>
+        </div
+      </nav>
+    </header>
+
+
+    <section class="site-section">
+      <div class="container">
+        
+        <div class="row blog-entries">
+          <div class="col-md-12 col-lg-8 main-content">
+            
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="mb-4">Trouves le meilleur spot ! ! ! </h2>
+                <p>Afin de trouver le spot qui te correspond, tu peux choisir les caractéristiques idéal que tu souhaites pour ton spot. 
+                    Tu n’auras ensuite plus qu’a choisir dans la liste des spots pour plus d’information tu peux cliquer sur le spot.
+                    <br />
+                    </p>
+                    <center><p>BONNE RECHERCHE</p></center>
+                  
+                    <br />
+
+              </div>
+
+            </div>
+            <form method = "POST">
+            <label form="day"> <h5>Choisissez le jour pour votre session de surf</h5> </label>
+            <select id="day" name = "day_select">
+              <option value="day_0">{% for i in spot[0:1] %} {{i['day_0']}}{% endfor %} </option>
+              <option value="day_1">{% for i in spot[0:1] %} {{i['day_1']}}  {% endfor %} </option>
+              <option value="day_2">{% for i in spot[0:1] %} {{i['day_2']}}  {% endfor %} </option>
+              <option value="day_3">{% for i in spot[0:1] %} {{i['day_3']}}  {% endfor %} </option>
+              <option value="day_4">{% for i in spot[0:1] %} {{i['day_4']}}  {% endfor %} </option>
+            </select>
+            <br />
+            <label form="swell"> <h5> Choisissez la taille de swell minimum de votre spot :</h5> </label>
+            <select id="swell" name = "vague_select">
+              <option value="1">1 m</option>
+              <option value="2">2 m</option>
+              <option value="3">3 m</option>
+              <option value="4">4 m</option>
+              <option value="5">5 m</option>
+            </select>
+            <br />
+
+            <label form="air"> <h5>Choisissez la température d'air minimum de votre spot: </h5></label>
+            <select id="air" name = "air_select">
+              <option value="-10"> pas de limite </option>
+              <option value="5"> 5°C </option>
+              <option value="10">10°C</option>
+              <option value="15">15°C</option>
+              <option value="20">20°C</option>
+            </select>
+            <br /> 
+
+            <label form="wind"> <h5>Choisissez la vitesse maximum du vent sur votre spot :</h5></label>
+            <select id="wind" name = "wind_select">
+              <option value="200"> pas de limite </option>
+              <option value="10"> 100 km/h </option>
+              <option value="80">80 km/h </option>
+              <option value="60">60 km/h</option>
+              <option value="40">40 km/h</option>
+              <option value="20">20 km/h</option>
+            </select>
+            <br/>         
+            <center><button type="submit"> Envoyer </button></center>
+           </form>
+           <br /><br />
+
+          <center><h2>Voici les spots qui correspondent à vos critéres de recherche :</h2></center> 
+          <br /><br />
+              </div>
+            </div>
+
+            <div>
+                {% if  day_0 %}
+                  <ul>
+                    {% for i in spot2 %}
+                    <div> <li> Aujourd'hui le spot <b><a href="{{i['url_clean_spot']}}">{{i['name_spot']}} </a></b> a une hauteur de vague de <b>{{i['swell_day_0']}} mètre(s) </b>,
+                      une température d'air de <b>{{i['temp_air_day_0']}}°C</b> et la vitesse du vent est de <b>{{i['vitesse_vent_day_0']}} km/h</b></li>
+                    </div> 
+                    {% endfor %} </li>
+                  
+
+                {% elif day_1 %}
+                  {% for i in spot2 %}
+                  <div> <li> {% for i in spot[0:1] %} {{i['day_1']}}  {% endfor %}<b><a href="{{i['url_clean_spot']}}">{{i['name_spot']}} </a></b> a une hauteur de vague de <b>{{i['swell_day_1']}} mètre(s) </b>,
+                    une température d'air de <b>{{i['temp_air_day_1']}}°C</b> et la vitesse du vent est de <b>{{i['vitesse_vent_day_1']}} km/h</b></li>
+                  </div> 
+                  {% endfor %} </li>
+
+                {% elif day_2 %}
+                  {% for i in spot2 %}
+                  <div> <li> {% for i in spot[0:1] %} {{i['day_2']}}  {% endfor %} <b><a href="{{i['url_clean_spot']}}">{{i['name_spot']}} </a></b> a une hauteur de vague de <b>{{i['swell_day_2']}} mètre(s) </b>,
+                    une température d'air de <b>{{i['temp_air_day_2']}}°C</b> et la vitesse du vent est de <b>{{i['vitesse_vent_day_2']}} km/h</b></li>
+                  </div> 
+                  {% endfor %}  </li>               
+
+                {% elif day_3 %}
+                  {% for i in spot2 %}
+                  <div> <li>{% for i in spot[0:1] %} {{i['day_3']}}  {% endfor %} <b><a href="{{i['url_clean_spot']}}">{{i['name_spot']}} </a></b> a une hauteur de vague de <b>{{i['swell_day_3']}} mètre(s) </b>,
+                    une température d'air de <b>{{i['temp_air_day_3']}}°C</b> et la vitesse du vent est de <b>{{i['vitesse_vent_day_3']}} km/h</b></li>
+                  </div> 
+                  {% endfor %}      </li>             
+
+                {% elif day_4 %}
+                  {% for i in spot2 %}
+                  <div> <li> {% for i in spot[0:1] %} {{i['day_1']}}  {% endfor %} <b><a href="{{i['url_clean_spot']}}">{{i['name_spot']}} </a></b> a une hauteur de vague de <b>{{i['swell_day_4']}} mètre(s) </b>,
+                    une température d'air de <b>{{i['temp_air_day_4']}}°C</b> et la vitesse du vent est de <b>{{i['vitesse_vent_day_4']}} km/h</b></li>
+                  </div> 
+                  {% endfor %}  </li>
+
+                {% endif %} 
+              </ul>
+              </div>
+          </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+  
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+            <h3>application developed by Antoine MOREAU</h3>
+
+      </div>
+    </footer>
+    <!-- END footer -->
+    
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+    
+    <script src="{{ url_for('static', filename='script/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/jquery-migrate-3.0.0.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/jquery.stellar.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='script/main.js') }}"></script>
+  </body>
+</html>
+
+
