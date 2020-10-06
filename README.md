@@ -39,6 +39,4 @@ App_web.py
 ![Menu_déroulant](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Menu_déroulant.png)
 
 
-
-
-
+![DashBoard](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Capture d’écran 2020-10-06 à 20.13.36.png)
