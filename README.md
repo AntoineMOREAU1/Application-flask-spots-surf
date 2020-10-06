@@ -25,7 +25,7 @@ App_web.py
 
 
 # Résultat 
-![image1](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/main/img_read_me/Affichage_des_spots.png.png)
+![image1](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/main/img_read_me/Affichage_des_spots.png)
 ![Test Image 6](https://github.com/AntoineMOREAU1/Mosaique-image-python-Projet-2017/blob/main/Photo-Final/aurelie28.jpg)
 
 ![Test Image 1](https://github.com/AntoineMOREAU1/Mosaique-image-python-Projet-2017/blob/main/Photo-OG/avengers.jpg)
