@@ -25,11 +25,11 @@ App_web.py
 
 
 # Résultat 
-![image1](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Affichage_des_spots.png)
-![Test Image 6](https://github.com/AntoineMOREAU1/Mosaique-image-python-Projet-2017/blob/main/Photo-Final/aurelie28.jpg)
+![Page_acceuil](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Page_acceuil.png)
+![Affichage_des_spots](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Affichage_des_spots.png)
+![Menu_déroulant](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Menu_déroulant.png)
+![Choix_des_critéres.png](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Choix_des_critéres.png)
 
-![Test Image 1](https://github.com/AntoineMOREAU1/Mosaique-image-python-Projet-2017/blob/main/Photo-OG/avengers.jpg)
-![Test Image 2](https://github.com/AntoineMOREAU1/Mosaique-image-python-Projet-2017/blob/main/Photo-Final/avangersfinal.jpg)
 
 
 
