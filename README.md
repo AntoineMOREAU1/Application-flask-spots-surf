@@ -25,10 +25,18 @@ App_web.py
 
 
 # Résultat 
+
+# Page d'aceuil
 ![Page_acceuil](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Page_acceuil.png)
-![Affichage_des_spots](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Affichage_des_spots.png)
-![Menu_déroulant](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Menu_déroulant.png)
+
+# Selection du spot par critéres
 ![Choix_des_critéres.png](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Choix_des_critéres.png)
+
+# Affichage des spots correspondant aux critéres 
+![Affichage_des_spots](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Affichage_des_spots.png)
+
+# Accés à des dashboards pour mieux comprendre les conditions sur l'ensemble du terrritoire 
+![Menu_déroulant](https://github.com/AntoineMOREAU1/Projet_App_flask/blob/master/img_read_me/Menu_déroulant.png)
 
 
 
